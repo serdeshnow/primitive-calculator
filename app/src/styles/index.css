@@ -1,0 +1,50 @@
+@font-face {
+	font-family: DigitalRegular;
+	src: url("../assets/fonts/Digital\ Regular.ttf");
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url("../assets/img/background.png");
+	background-position-x: center;
+	background-position-y: center;
+}
+
+:root {
+	/* Variables */
+	--font-family-main: "Segoe UI";
+	--font-family-calc: "DigitalRegular";
+
+	--color-dark-1: #000000;
+	--color-dark-2: #010b16;
+	--color-dark-gray: #30303099;
+	--color-gray: #898989;
+	--color-gray-hover: #808080;
+	--color-gray-active: #707070;
+	--color-light: #ffffff;
+	--color-light-semitransparent: rgba(255, 255, 255, 0.7);
+	--color-accent: rgba(37, 84, 255, 0.7);
+	--color-screen: #3b5e35;
+
+	--linear-gradient-bg: linear-gradient(
+		45deg,
+		var(--color-accent),
+		var(--color-light-semitransparent)
+	);
+
+	--box-shadow: 2px 6px 20px rgba(0, 0, 0, 0.25);
+
+	--border-radius-l: 30px;
+	--border-radius-m: 15px;
+
+	font-family: var(--font-family-main);
+	background-color: var(--color-dark-2);
+	color: var(--color-light);
+
+	width: 100%;
+}
