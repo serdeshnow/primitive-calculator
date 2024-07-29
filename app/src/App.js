@@ -18,15 +18,20 @@ function App() {
 	};
 
 	const onOperatorClick = (button) => {
-		setOperator(String(button.content));
+		setOperator(button.content);
 	};
 
 	const onEqualClick = () => {
-		const calculationResult =
-			operator === "+"
-				? Number(operand1) + Number(operand2)
-				: Number(operand1) - Number(operand2); // Не знаю как сделать лучше
-		setOperand1(String(calculationResult));
+		switch (operator) {
+			case "+":
+				setOperand1(Number(operand1) + Number(operand2));
+				break;
+			case "-":
+				setOperand1(Number(operand1) - Number(operand2));
+				break;
+			default:
+				break;
+		}
 		setOperator("");
 		setOperand2("");
 	};
@@ -62,7 +67,7 @@ function App() {
 							return (
 								<button
 									type="button"
-									className={`calculator__button ${button.content === "0" ? "calculator__button-zero" : ""} ${button.content === "=" ? "calculator__button-equal" : ""}`}
+									className={`calculator__button${button.content === "0" ? " calculator__button-zero" : ""}${button.content === "=" ? " calculator__button-equal" : ""}`}
 									key={button.id}
 									onClick={() => {
 										defineOnButtonClick(button);
